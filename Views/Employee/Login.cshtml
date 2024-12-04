@@ -1,0 +1,29 @@
+﻿@model EmployeeManagement.Models.LoginViewModel
+@{
+    Layout = "_Layout";  // Use the shared layout
+}
+
+<h2>Login</h2>
+
+<form method="post" asp-action="Login">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+    }
+
+    <div>
+        <label>Employee Name:</label>
+        <input asp-for="EmployeeName" />
+        @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <input asp-for="Password" type="password" />
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit">Log In</button>
+</form>

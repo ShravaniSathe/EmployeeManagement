@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "_Layout";  // Use the shared layout
+}
+
+@model EmployeeManagement.Models.Employee
+
+<h2>Welcome, @Model.EmployeeName!</h2>
+<p>Company Name: @Model.CompanyName</p>
+<p>Date of Birth: @Model.DOB.ToShortDateString()</p>
