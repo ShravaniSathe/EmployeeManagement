@@ -15,7 +15,7 @@ namespace EmployeeManagement.Repositories.Implementations
             _dbContext = dbContext;
         }
 
-        // Add a new employee to the database
+       
         public async Task<int> AddEmployeeAsync(Employee employee)
         {
             const string sql = @"
@@ -30,7 +30,7 @@ namespace EmployeeManagement.Repositories.Implementations
             }
         }
 
-        // Get employee details by credentials
+        
         public async Task<Employee> GetEmployeeByCredentialsAsync(string employeeName, string password)
         {
             const string sql = @"
@@ -43,7 +43,7 @@ namespace EmployeeManagement.Repositories.Implementations
             }
         }
 
-        // Get employee details by ID
+        
         public async Task<Employee> GetEmployeeByIdAsync(int employeeId)
         {
             const string sql = @"

@@ -15,7 +15,7 @@ namespace EmployeeManagement.Data
 
         public IDbConnection CreateConnection()
         {
-            // Retrieve connection string from appsettings.json
+            
             return new SqlConnection(_configuration.GetConnectionString("EmployeeDB"));
         }
     }
